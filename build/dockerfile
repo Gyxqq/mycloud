@@ -1,0 +1,10 @@
+  FROM nextcloud:latest
+  COPY deb.tar /root/ 
+  COPY run.sh /root/ 
+  COPY app.tar /root/ 
+  COPY utar.sh /root/ 
+  COPY sources.list /etc/apt/ 
+  COPY aria2 /etc/init.d/
+  COPY start.sh /root/
+  COPY aria2.conf /root/
+  CMD /entrypoint.sh apache2-foreground && chmod 777 /root/run.sh && /root/run.sh  && /etc/init.d/aria2 start 
