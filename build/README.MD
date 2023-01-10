@@ -3,4 +3,4 @@
 
 在build文件夹下使用 docker build -t mycloud:<TAG> . 进行构建
   
-  在构建时应该更改dockerfile的
+  在构建时应该更改dockerfile的FROM为此镜像版本
